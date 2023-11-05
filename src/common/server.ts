@@ -59,14 +59,14 @@ async function createServer(
 
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
-        // Register the server for python documents
+        // Register the server for yaml documents
         documentSelector: isVirtualWorkspace()
-            ? [{ language: 'python' }]
+            ? [{ language: 'yaml' }]
             : [
-                  { scheme: 'file', language: 'python' },
-                  { scheme: 'untitled', language: 'python' },
-                  { scheme: 'vscode-notebook', language: 'python' },
-                  { scheme: 'vscode-notebook-cell', language: 'python' },
+                  { scheme: 'file', language: 'yaml' },
+                  { scheme: 'untitled', language: 'yaml' },
+                  { scheme: 'vscode-notebook', language: 'yaml' },
+                  { scheme: 'vscode-notebook-cell', language: 'yaml' },
               ],
         outputChannel: outputChannel,
         traceOutputChannel: outputChannel,

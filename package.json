@@ -1,22 +1,22 @@
 {
-    "name": "<pytool-module>",
-    "displayName": "<pytool-display-name>",
-    "description": "Linting support for python files using `<pytool-module>`.",
-    "version": "2022.0.0-dev",
+    "name": "hydra-lsp",
+    "displayName": "Hydra LSP",
+    "description": "A Visual Studio Code extension for Hydra YAML configs LSP support using `hydra-lsp`.",
+    "version": "2023.0.0",
     "preview": true,
     "serverInfo": {
-        "name": "<pytool-display-name>",
-        "module": "<pytool-module>"
+        "name": "Language Server for Hydra YAML Configs",
+        "module": "hydra-lsp"
     },
-    "publisher": "<my-publisher>",
+    "publisher": "zhuravchak",
     "license": "MIT",
-    "homepage": "https://github.com/<my-github>/<my-extension-project>",
+    "homepage": "https://github.com/retsediv/hydra-lsp-vscode",
     "repository": {
         "type": "git",
-        "url": "https://github.com/<my-github>/<my-extension-project>.git"
+        "url": "https://github.com/retsediv/hydra-lsp-vscode.git"
     },
     "bugs": {
-        "url": "https://github.com/<my-github>/<my-extension-project>/issues"
+        "url": "https://github.com/retsediv/hydra-lsp-vscode/issues"
     },
     "galleryBanner": {
         "color": "#1e415e",
@@ -24,15 +24,17 @@
     },
     "keywords": [
         "python",
-        "<pytool-module>"
+        "hydra",
+        "yaml",
+        "lsp",
+        "hydra-lsp"
     ],
     "engines": {
         "vscode": "^1.78.0"
     },
     "categories": [
         "Programming Languages",
-        "Linters",
-        "Formatters"
+        "Language Packs"
     ],
     "extensionDependencies": [
         "ms-python.python"
@@ -40,12 +42,12 @@
     "capabilities": {
         "virtualWorkspaces": {
             "supported": false,
-            "description": "Virtual Workspaces are not supported with <pytool-display-name>."
+            "description": "Virtual Workspaces are not supported with Language Server for Hydra YAML Configs."
         }
     },
     "activationEvents": [
-        "onLanguage:python",
-        "workspaceContains:*.py"
+        "onLanguage:yaml",
+        "workspaceContains:*.yaml"
     ],
     "main": "./dist/extension.js",
     "scripts": {
@@ -59,12 +61,12 @@
         "lint": "eslint src --ext ts",
         "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
         "test": "node ./out/test/runTest.js",
-        "vsce-package": "vsce package -o <pytool-module>.vsix"
+        "vsce-package": "vsce package -o hydra-lsp.vsix"
     },
     "contributes": {
         "configuration": {
             "properties": {
-                "<pytool-module>.args": {
+                "hydra-lsp.args": {
                     "default": [],
                     "description": "Arguments passed in. Each argument is a separate item in the array.",
                     "items": {
@@ -73,39 +75,7 @@
                     "scope": "resource",
                     "type": "array"
                 },
-                "<pytool-module>.path": {
-                    "default": [],
-                    "description": "When set to a path to <pytool-module> binary, extension will use that. NOTE: Using this option may slowdown server response time.",
-                    "scope": "resource",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "<pytool-module>.importStrategy": {
-                    "default": "useBundled",
-                    "description": "Defines where `<pytool-module>` is imported from. This setting may be ignored if `<pytool-module>.path` is set.",
-                    "enum": [
-                        "useBundled",
-                        "fromEnvironment"
-                    ],
-                    "enumDescriptions": [
-                        "Always use the bundled version of `<pytool-module>`.",
-                        "Use `<pytool-module>` from environment, fallback to bundled version only if `<pytool-module>` not available in the environment."
-                    ],
-                    "scope": "window",
-                    "type": "string"
-                },
-                "<pytool-module>.interpreter": {
-                    "default": [],
-                    "description": "When set to a path to python executable, extension will use that to launch the server and any subprocess.",
-                    "scope": "resource",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "<pytool-module>.showNotifications": {
+                "hydra-lsp.showNotifications": {
                     "default": "off",
                     "description": "Controls when notifications are shown by this extension.",
                     "enum": [
@@ -128,8 +98,8 @@
         "commands": [
             {
                 "title": "Restart Server",
-                "category": "<pytool-display-name>",
-                "command": "<pytool-module>.restart"
+                "category": "Language Server for Hydra YAML Configs",
+                "command": "hydra-lsp.restart"
             }
         ]
     },

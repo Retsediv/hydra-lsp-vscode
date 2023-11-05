@@ -13,3 +13,7 @@ pygls
 packaging
 
 # TODO: Add your tool here
+# git+https://github.com/Retsediv/hydra-lsp.git@3049662d2fbe347dc02a01ce713b7c45f8277b72#egg=hydra-lsp
+file:///home/andrii/Projects/hydra-lsp
+
+ 

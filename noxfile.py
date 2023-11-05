@@ -35,10 +35,10 @@ def _check_files(names: List[str]) -> None:
 
 
 def _update_pip_packages(session: nox.Session) -> None:
-    session.run("pip-compile", "--generate-hashes", "--resolver=backtracking", "--upgrade", "./requirements.in")
+    session.run("pip-compile", "--resolver=backtracking", "--upgrade", "./requirements.in")
     session.run(
         "pip-compile",
-        "--generate-hashes",
+        # "--generate-hashes",
         "--resolver=backtracking",
         "--upgrade",
         "./src/test/python_tests/requirements.in",
@@ -91,10 +91,10 @@ def _update_npm_packages(session: nox.Session) -> None:
 
 def _setup_template_environment(session: nox.Session) -> None:
     session.install("wheel", "pip-tools")
-    session.run("pip-compile", "--generate-hashes", "--resolver=backtracking", "--upgrade", "./requirements.in")
+    session.run("pip-compile", "--resolver=backtracking", "--upgrade", "./requirements.in")
     session.run(
         "pip-compile",
-        "--generate-hashes",
+        # "--generate-hashes",
         "--resolver=backtracking",
         "--upgrade",
         "./src/test/python_tests/requirements.in",
