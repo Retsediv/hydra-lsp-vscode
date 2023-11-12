@@ -2,7 +2,7 @@
     "name": "hydra-lsp",
     "displayName": "Hydra LSP",
     "description": "A Visual Studio Code extension for Hydra YAML configs LSP support using `hydra-lsp`.",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "preview": true,
     "serverInfo": {
         "name": "Language Server for Hydra YAML Configs",
