@@ -15,24 +15,24 @@ exceptiongroup==1.1.3
     #   cattrs
     #   pytest
 hydra-lsp @ git+https://github.com/Retsediv/hydra-lsp.git
-    # via -r ./requirements.in
+    # via -r requirements.in
 iniconfig==2.0.0
     # via pytest
 intervaltree==3.1.0
     # via hydra-lsp
-lsprotocol==2023.0.0b1
+lsprotocol==2023.0.0
     # via
     #   hydra-lsp
     #   pygls
 packaging==23.2
     # via
-    #   -r ./requirements.in
+    #   -r requirements.in
     #   pytest
 pluggy==1.3.0
     # via pytest
-pygls==1.1.2
+pygls==1.2.0
     # via
-    #   -r ./requirements.in
+    #   -r requirements.in
     #   hydra-lsp
 pygtrie==2.5.0
     # via hydra-lsp
@@ -46,9 +46,5 @@ sortedcontainers==2.4.0
     # via intervaltree
 tomli==2.0.1
     # via pytest
-typeguard==4.1.5
-    # via pygls
 typing-extensions==4.8.0
-    # via
-    #   cattrs
-    #   typeguard
+    # via cattrs
