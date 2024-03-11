@@ -10,11 +10,11 @@ iniconfig==2.0.0
     # via pytest
 packaging==23.2
     # via pytest
-pluggy==1.3.0
+pluggy==1.4.0
     # via pytest
 pyhamcrest==2.1.0
     # via -r requirements.in
-pytest==8.0.0
+pytest==8.1.1
     # via -r requirements.in
 python-jsonrpc-server==0.4.0
     # via -r requirements.in
