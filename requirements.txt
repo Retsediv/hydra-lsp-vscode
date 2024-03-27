@@ -26,7 +26,7 @@ lsprotocol==2023.0.1
     #   pygls
 packaging==23.2
     # via -r requirements.in
-pygls==1.3.0
+pygls==1.3.1
     # via
     #   -r requirements.in
     #   hydra-lsp
